@@ -1,0 +1,129 @@
+{
+  "name": "@victor/core",
+  "version": "0.1.0",
+  "description": "Unified wrapper around popular vector databases — one API, any backend",
+  "type": "module",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs",
+      "types": "./dist/index.d.ts"
+    },
+    "./pinecone": {
+      "import": "./dist/adapters/pinecone/index.js",
+      "require": "./dist/adapters/pinecone/index.cjs",
+      "types": "./dist/adapters/pinecone/index.d.ts"
+    },
+    "./qdrant": {
+      "import": "./dist/adapters/qdrant/index.js",
+      "require": "./dist/adapters/qdrant/index.cjs",
+      "types": "./dist/adapters/qdrant/index.d.ts"
+    },
+    "./chroma": {
+      "import": "./dist/adapters/chroma/index.js",
+      "require": "./dist/adapters/chroma/index.cjs",
+      "types": "./dist/adapters/chroma/index.d.ts"
+    },
+    "./milvus": {
+      "import": "./dist/adapters/milvus/index.js",
+      "require": "./dist/adapters/milvus/index.cjs",
+      "types": "./dist/adapters/milvus/index.d.ts"
+    },
+    "./pgvector": {
+      "import": "./dist/adapters/pgvector/index.js",
+      "require": "./dist/adapters/pgvector/index.cjs",
+      "types": "./dist/adapters/pgvector/index.d.ts"
+    },
+    "./weaviate": {
+      "import": "./dist/adapters/weaviate/index.js",
+      "require": "./dist/adapters/weaviate/index.cjs",
+      "types": "./dist/adapters/weaviate/index.d.ts"
+    },
+    "./embeddings/openai": {
+      "import": "./dist/embeddings/openai.js",
+      "require": "./dist/embeddings/openai.cjs",
+      "types": "./dist/embeddings/openai.d.ts"
+    },
+    "./embeddings/cohere": {
+      "import": "./dist/embeddings/cohere.js",
+      "require": "./dist/embeddings/cohere.cjs",
+      "types": "./dist/embeddings/cohere.d.ts"
+    }
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit",
+    "lint": "biome check src/",
+    "lint:fix": "biome check --write src/",
+    "format": "biome format --write src/",
+    "prepublishOnly": "npm run build"
+  },
+  "peerDependencies": {
+    "@pinecone-database/pinecone": ">=3.0.0",
+    "@qdrant/js-client-rest": ">=1.9.0",
+    "@zilliz/milvus2-sdk-node": ">=2.4.0",
+    "chromadb": ">=1.8.0",
+    "cohere-ai": ">=7.0.0",
+    "openai": ">=4.0.0",
+    "pg": ">=8.0.0",
+    "pgvector": ">=0.2.0",
+    "weaviate-client": ">=3.0.0"
+  },
+  "peerDependenciesMeta": {
+    "@pinecone-database/pinecone": { "optional": true },
+    "@qdrant/js-client-rest": { "optional": true },
+    "@zilliz/milvus2-sdk-node": { "optional": true },
+    "chromadb": { "optional": true },
+    "cohere-ai": { "optional": true },
+    "openai": { "optional": true },
+    "pg": { "optional": true },
+    "pgvector": { "optional": true },
+    "weaviate-client": { "optional": true }
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.0",
+    "@pinecone-database/pinecone": "^3.0.0",
+    "@qdrant/js-client-rest": "^1.12.0",
+    "@types/node": "^22.0.0",
+    "@types/pg": "^8.11.0",
+    "@zilliz/milvus2-sdk-node": "^2.4.0",
+    "chromadb": "^1.9.0",
+    "cohere-ai": "^7.14.0",
+    "openai": "^4.70.0",
+    "pg": "^8.13.0",
+    "pgvector": "^0.2.0",
+    "tsup": "^8.3.0",
+    "typescript": "^5.6.0",
+    "vitest": "^2.1.0",
+    "weaviate-client": "^3.2.0"
+  },
+  "keywords": [
+    "vector",
+    "vector-database",
+    "embeddings",
+    "pinecone",
+    "qdrant",
+    "chroma",
+    "chromadb",
+    "milvus",
+    "pgvector",
+    "weaviate",
+    "similarity-search",
+    "ai",
+    "llm",
+    "rag"
+  ]
+}
