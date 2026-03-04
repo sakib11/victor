@@ -9,49 +9,49 @@
   },
   "exports": {
     ".": {
+      "types": "./dist/index.d.ts",
       "import": "./dist/index.js",
-      "require": "./dist/index.cjs",
-      "types": "./dist/index.d.ts"
+      "require": "./dist/index.cjs"
     },
     "./pinecone": {
+      "types": "./dist/adapters/pinecone/index.d.ts",
       "import": "./dist/adapters/pinecone/index.js",
-      "require": "./dist/adapters/pinecone/index.cjs",
-      "types": "./dist/adapters/pinecone/index.d.ts"
+      "require": "./dist/adapters/pinecone/index.cjs"
     },
     "./qdrant": {
+      "types": "./dist/adapters/qdrant/index.d.ts",
       "import": "./dist/adapters/qdrant/index.js",
-      "require": "./dist/adapters/qdrant/index.cjs",
-      "types": "./dist/adapters/qdrant/index.d.ts"
+      "require": "./dist/adapters/qdrant/index.cjs"
     },
     "./chroma": {
+      "types": "./dist/adapters/chroma/index.d.ts",
       "import": "./dist/adapters/chroma/index.js",
-      "require": "./dist/adapters/chroma/index.cjs",
-      "types": "./dist/adapters/chroma/index.d.ts"
+      "require": "./dist/adapters/chroma/index.cjs"
     },
     "./milvus": {
+      "types": "./dist/adapters/milvus/index.d.ts",
       "import": "./dist/adapters/milvus/index.js",
-      "require": "./dist/adapters/milvus/index.cjs",
-      "types": "./dist/adapters/milvus/index.d.ts"
+      "require": "./dist/adapters/milvus/index.cjs"
     },
     "./pgvector": {
+      "types": "./dist/adapters/pgvector/index.d.ts",
       "import": "./dist/adapters/pgvector/index.js",
-      "require": "./dist/adapters/pgvector/index.cjs",
-      "types": "./dist/adapters/pgvector/index.d.ts"
+      "require": "./dist/adapters/pgvector/index.cjs"
     },
     "./weaviate": {
+      "types": "./dist/adapters/weaviate/index.d.ts",
       "import": "./dist/adapters/weaviate/index.js",
-      "require": "./dist/adapters/weaviate/index.cjs",
-      "types": "./dist/adapters/weaviate/index.d.ts"
+      "require": "./dist/adapters/weaviate/index.cjs"
     },
     "./embeddings/openai": {
+      "types": "./dist/embeddings/openai.d.ts",
       "import": "./dist/embeddings/openai.js",
-      "require": "./dist/embeddings/openai.cjs",
-      "types": "./dist/embeddings/openai.d.ts"
+      "require": "./dist/embeddings/openai.cjs"
     },
     "./embeddings/cohere": {
+      "types": "./dist/embeddings/cohere.d.ts",
       "import": "./dist/embeddings/cohere.js",
-      "require": "./dist/embeddings/cohere.cjs",
-      "types": "./dist/embeddings/cohere.d.ts"
+      "require": "./dist/embeddings/cohere.cjs"
     }
   },
   "main": "./dist/index.cjs",
