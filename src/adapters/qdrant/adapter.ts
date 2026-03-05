@@ -47,7 +47,7 @@ export interface QdrantAdapterConfig {
  *
  * @example
  * ```ts
- * import { QdrantAdapter } from "victordb/qdrant";
+ * import { QdrantAdapter } from "@amanat_doulah/victor-db/qdrant";
  *
  * const adapter = new QdrantAdapter({
  *   url: "http://localhost:6333",

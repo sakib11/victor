@@ -16,8 +16,8 @@
     "rootDir": "./src",
     "baseUrl": ".",
     "paths": {
-      "victordb": ["./src/index.ts"],
-      "victordb/*": ["./src/*"]
+      "@amanat_doulah/victor-db": ["./src/index.ts"],
+      "@amanat_doulah/victor-db/*": ["./src/*"]
     },
     "noUnusedLocals": true,
     "noUnusedParameters": true,

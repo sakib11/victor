@@ -101,7 +101,7 @@ type WeaviateObject = {
  *
  * @example
  * ```ts
- * import { WeaviateAdapter } from "victordb/weaviate";
+ * import { WeaviateAdapter } from "@amanat_doulah/victor-db/weaviate";
  *
  * // Local
  * const adapter = new WeaviateAdapter({ scheme: "local" });

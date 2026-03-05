@@ -43,9 +43,9 @@ export interface VictorClientOptions {
  *
  * @example
  * ```ts
- * import { VictorClient } from "victordb";
- * import { PineconeAdapter } from "victordb/pinecone";
- * import { OpenAIEmbedder } from "victordb/embeddings/openai";
+ * import { VictorClient } from "@amanat_doulah/victor-db";
+ * import { PineconeAdapter } from "@amanat_doulah/victor-db/pinecone";
+ * import { OpenAIEmbedder } from "@amanat_doulah/victor-db/embeddings/openai";
  *
  * const client = new VictorClient({
  *   store: new PineconeAdapter({ apiKey: process.env.PINECONE_API_KEY }),

@@ -9,7 +9,7 @@ import type { EmbeddingResult } from "../types/index.js";
  *
  * @example
  * ```ts
- * import { OpenAIEmbedder } from "victordb/embeddings/openai";
+ * import { OpenAIEmbedder } from "@amanat_doulah/victor-db/embeddings/openai";
  *
  * const embedder = new OpenAIEmbedder({
  *   apiKey: "sk-...",

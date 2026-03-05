@@ -1,4 +1,4 @@
-# victordb
+# @amanat_doulah/victor-db
 
 Unified wrapper around popular vector databases. One API, any backend.
 
@@ -20,7 +20,7 @@ Write your vector search code once and swap between **Pinecone**, **Qdrant**, **
 
 ```bash
 # Core package (always required)
-npm install victordb
+npm install @amanat_doulah/victor-db
 
 # Then install only the database SDK you need:
 npm install @pinecone-database/pinecone    # Pinecone
@@ -38,8 +38,8 @@ npm install cohere-ai                      # Cohere embeddings
 ## Quick Start
 
 ```typescript
-import { VictorClient } from "victordb";
-import { PineconeAdapter } from "victordb/pinecone";
+import { VictorClient } from "@amanat_doulah/victor-db";
+import { PineconeAdapter } from "@amanat_doulah/victor-db/pinecone";
 
 // 1. Create adapter + client
 const client = new VictorClient({
@@ -82,9 +82,9 @@ await client.disconnect();
 Pair any adapter with an embedder to skip manual embedding entirely:
 
 ```typescript
-import { VictorClient } from "victordb";
-import { QdrantAdapter } from "victordb/qdrant";
-import { OpenAIEmbedder } from "victordb/embeddings/openai";
+import { VictorClient } from "@amanat_doulah/victor-db";
+import { QdrantAdapter } from "@amanat_doulah/victor-db/qdrant";
+import { OpenAIEmbedder } from "@amanat_doulah/victor-db/embeddings/openai";
 
 const client = new VictorClient({
   store: new QdrantAdapter({ url: "http://localhost:6333" }),
@@ -114,7 +114,7 @@ const results = await client.searchByText("docs", {
 ### Pinecone
 
 ```typescript
-import { PineconeAdapter } from "victordb/pinecone";
+import { PineconeAdapter } from "@amanat_doulah/victor-db/pinecone";
 
 const adapter = new PineconeAdapter({
   apiKey: "your-api-key",     // or set PINECONE_API_KEY env var
@@ -127,7 +127,7 @@ const adapter = new PineconeAdapter({
 ### Qdrant
 
 ```typescript
-import { QdrantAdapter } from "victordb/qdrant";
+import { QdrantAdapter } from "@amanat_doulah/victor-db/qdrant";
 
 // Self-hosted
 const adapter = new QdrantAdapter({
@@ -144,7 +144,7 @@ const adapter = new QdrantAdapter({
 ### ChromaDB
 
 ```typescript
-import { ChromaAdapter } from "victordb/chroma";
+import { ChromaAdapter } from "@amanat_doulah/victor-db/chroma";
 
 const adapter = new ChromaAdapter({
   path: "http://localhost:8000",   // Chroma server URL
@@ -154,7 +154,7 @@ const adapter = new ChromaAdapter({
 ### Milvus / Zilliz
 
 ```typescript
-import { MilvusAdapter } from "victordb/milvus";
+import { MilvusAdapter } from "@amanat_doulah/victor-db/milvus";
 
 // Self-hosted Milvus
 const adapter = new MilvusAdapter({
@@ -174,7 +174,7 @@ const adapter = new MilvusAdapter({
 ### pgvector (PostgreSQL)
 
 ```typescript
-import { PgVectorAdapter } from "victordb/pgvector";
+import { PgVectorAdapter } from "@amanat_doulah/victor-db/pgvector";
 
 const adapter = new PgVectorAdapter({
   connectionString: "postgresql://user:pass@localhost:5432/mydb",
@@ -187,7 +187,7 @@ const adapter = new PgVectorAdapter({
 ### Weaviate
 
 ```typescript
-import { WeaviateAdapter } from "victordb/weaviate";
+import { WeaviateAdapter } from "@amanat_doulah/victor-db/weaviate";
 
 // Local Docker
 const adapter = new WeaviateAdapter({ scheme: "local" });
@@ -265,8 +265,8 @@ MongoDB-style filters work across all adapters. Victor translates them to each d
 ### Embedding Providers
 
 ```typescript
-import { OpenAIEmbedder } from "victordb/embeddings/openai";
-import { CohereEmbedder } from "victordb/embeddings/cohere";
+import { OpenAIEmbedder } from "@amanat_doulah/victor-db/embeddings/openai";
+import { CohereEmbedder } from "@amanat_doulah/victor-db/embeddings/cohere";
 
 // OpenAI
 const openai = new OpenAIEmbedder({
@@ -298,7 +298,7 @@ import {
   ValidationError,
   AdapterError,
   EmbedderNotConfiguredError,
-} from "victordb";
+} from "@amanat_doulah/victor-db";
 
 try {
   await client.search("nonexistent", { vector: [...], topK: 5 });
@@ -314,7 +314,7 @@ try {
 ### Retry Utility
 
 ```typescript
-import { withRetry } from "victordb";
+import { withRetry } from "@amanat_doulah/victor-db";
 
 const result = await withRetry(
   () => client.search("collection", { vector: [...], topK: 10 }),
@@ -333,11 +333,11 @@ The entire point of Victor — change one line to switch databases:
 
 ```typescript
 // Before: Pinecone
-import { PineconeAdapter } from "victordb/pinecone";
+import { PineconeAdapter } from "@amanat_doulah/victor-db/pinecone";
 const store = new PineconeAdapter({ apiKey: "..." });
 
 // After: Qdrant (everything else stays the same)
-import { QdrantAdapter } from "victordb/qdrant";
+import { QdrantAdapter } from "@amanat_doulah/victor-db/qdrant";
 const store = new QdrantAdapter({ url: "http://localhost:6333" });
 
 // Your application code doesn't change:
@@ -350,7 +350,7 @@ const results = await client.search("collection", query);
 ## Architecture
 
 ```
-victordb
+@amanat_doulah/victor-db
 ├── VictorClient           # Main entry point (validation + embedding integration)
 ├── VectorStore            # Interface all adapters implement
 ├── Embedder               # Interface for embedding providers

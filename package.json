@@ -1,9 +1,13 @@
 {
-  "name": "victordb",
+  "name": "@amanat_doulah/victor-db",
   "version": "0.1.0",
   "description": "Unified wrapper around popular vector databases — one API, any backend",
   "type": "module",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/amanat-doulah/victor"
+  },
   "engines": {
     "node": ">=18.0.0"
   },
@@ -69,7 +73,8 @@
     "lint": "biome check src/",
     "lint:fix": "biome check --write src/",
     "format": "biome format --write src/",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run build",
+    "publish:public": "npm publish --access public"
   },
   "peerDependencies": {
     "@pinecone-database/pinecone": ">=3.0.0",
