@@ -80,7 +80,7 @@ type PgClient = {
  *
  * @example
  * ```ts
- * import { PgVectorAdapter } from "@victor/core/pgvector";
+ * import { PgVectorAdapter } from "victordb/pgvector";
  *
  * const adapter = new PgVectorAdapter({
  *   connectionString: "postgresql://user:pass@localhost:5432/mydb",

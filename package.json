@@ -1,5 +1,5 @@
 {
-  "name": "@victor/core",
+  "name": "victordb",
   "version": "0.1.0",
   "description": "Unified wrapper around popular vector databases — one API, any backend",
   "type": "module",

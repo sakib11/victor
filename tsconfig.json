@@ -16,8 +16,8 @@
     "rootDir": "./src",
     "baseUrl": ".",
     "paths": {
-      "@victor/core": ["./src/index.ts"],
-      "@victor/core/*": ["./src/*"]
+      "victordb": ["./src/index.ts"],
+      "victordb/*": ["./src/*"]
     },
     "noUnusedLocals": true,
     "noUnusedParameters": true,

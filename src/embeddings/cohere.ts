@@ -62,7 +62,7 @@ type CohereClient = {
  *
  * @example
  * ```ts
- * import { CohereEmbedder } from "@victor/core/embeddings/cohere";
+ * import { CohereEmbedder } from "victordb/embeddings/cohere";
  *
  * const embedder = new CohereEmbedder({
  *   apiKey: process.env.COHERE_API_KEY,

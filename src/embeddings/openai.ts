@@ -20,7 +20,7 @@ const MODEL_DIMENSIONS: Record<string, number> = {
  *
  * @example
  * ```ts
- * import { OpenAIEmbedder } from "@victor/core/embeddings/openai";
+ * import { OpenAIEmbedder } from "victordb/embeddings/openai";
  *
  * const embedder = new OpenAIEmbedder({
  *   apiKey: process.env.OPENAI_API_KEY,

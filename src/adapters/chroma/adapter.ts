@@ -58,7 +58,7 @@ type ChromaCollection = {
  *
  * @example
  * ```ts
- * import { ChromaAdapter } from "@victor/core/chroma";
+ * import { ChromaAdapter } from "victordb/chroma";
  *
  * const adapter = new ChromaAdapter({
  *   path: "http://localhost:8000",

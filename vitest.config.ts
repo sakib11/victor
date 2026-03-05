@@ -14,7 +14,7 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      "@victor/core": "./src/index.ts",
+      "victordb": "./src/index.ts",
     },
   },
 });
