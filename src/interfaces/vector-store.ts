@@ -16,8 +16,8 @@ import type {
  *
  * @example
  * ```ts
- * import { VictorClient } from "@amanat_doulah/victor-db";
- * import { PineconeAdapter } from "@amanat_doulah/victor-db/pinecone";
+ * import { VictorClient } from "@sakib11/victor";
+ * import { PineconeAdapter } from "@sakib11/victor/pinecone";
  *
  * const store: VectorStore = new PineconeAdapter({ apiKey: "..." });
  * await store.connect();

@@ -14,7 +14,7 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      "@amanat_doulah/victor-db": "./src/index.ts",
+      "@sakib11/victor": "./src/index.ts",
     },
   },
 });

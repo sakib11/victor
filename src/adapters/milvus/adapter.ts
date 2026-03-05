@@ -87,7 +87,7 @@ type MilvusClient = {
  *
  * @example
  * ```ts
- * import { MilvusAdapter } from "@amanat_doulah/victor-db/milvus";
+ * import { MilvusAdapter } from "@sakib11/victor/milvus";
  *
  * const adapter = new MilvusAdapter({
  *   address: "localhost:19530",

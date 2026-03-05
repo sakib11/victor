@@ -1,12 +1,12 @@
 {
-  "name": "@amanat_doulah/victor-db",
-  "version": "0.1.0",
+  "name": "@sakib11/victor",
+  "version": "0.1.1",
   "description": "Unified wrapper around popular vector databases — one API, any backend",
   "type": "module",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/amanat-doulah/victor"
+    "url": "https://github.com/sakib11/victor"
   },
   "engines": {
     "node": ">=18.0.0"

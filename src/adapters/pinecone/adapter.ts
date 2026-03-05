@@ -53,7 +53,7 @@ export interface PineconeAdapterConfig {
  *
  * @example
  * ```ts
- * import { PineconeAdapter } from "@amanat_doulah/victor-db/pinecone";
+ * import { PineconeAdapter } from "@sakib11/victor/pinecone";
  *
  * const adapter = new PineconeAdapter({
  *   apiKey: process.env.PINECONE_API_KEY,
